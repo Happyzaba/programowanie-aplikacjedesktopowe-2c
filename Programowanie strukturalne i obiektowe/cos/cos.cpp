@@ -262,7 +262,7 @@ void main_dec_converter()
 	{
 		show_converter_menu;
 	
-	}
+	} while (selected != 0);
 }
 
 
@@ -274,4 +274,5 @@ int main()
 	cin >> liczba;
 	cout << "Liczba po zmianie na liczbe binarna:"; dec_to_bin(liczba); cout << endl;
 	return 0;
+
 }
