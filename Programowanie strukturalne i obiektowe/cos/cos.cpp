@@ -167,41 +167,6 @@ void Zadanie4()
 	std::cout << stringNumber;
 	std::cout << "\n";
 }
-void dec_to_bin(int liczba)
-{
-	int i=0, tab[31];
-
-	while(liczba)
-	{
-	
-		tab[i++] = liczba % 2;
-		liczba /= 2;
-	}
-	
-	for (int j = i - 1; j >= 0; j--)
-		cout << tab[j];
-}
-void show_converter_menu()
-{
-	cout << "Menu:";
-	cout << "1. dec na bin";
-	cout << "2. dec na szesnastkowy";
-}
-int choosenOption()
-{
-
-}
-
-void menu_convertion(int choosenOption)
-{
-	switch (choosenOption)
-	{
-		case 1:
-			dec_to_bin;
-			break;
-	}
-
-}
 
 void doSelectedTask(int& selectedOption)
 {
@@ -255,24 +220,53 @@ void mainProgram()
 	} while (selected != 0);
 }
 
-void main_dec_converter()
+void Convert(int number, int system);
+
+void StartProgram()
 {
-	int selected;
-	do
-	{
-		show_converter_menu;
-	
-	} while (selected != 0);
+	int number;
+	int system;
+		cout << "Podaj liczbe: ";
+		cin >> number;
+		cout << "Podaj system: ";
+		cin >> system;
+		Convert(number, system);
+
+
 }
 
+void Convert(int number, int system)
+{
+	string nowaLiczba = "";
+	string napis = "";
+
+	while (number > 0) 
+	{
+		int wynik = number % system;
+		if (wynik >=10)
+		{
+			wynik = wynik - 10;
+			char a = 'A' + wynik;
+			nowaLiczba = a + nowaLiczba;
+		}
+		else
+		{
+			napis = wynik + 48;
+			nowaLiczba = napis + nowaLiczba;
+		}
+		number = number / system;
+	}
+	cout << nowaLiczba;
+}
 
 int main()
 {
-	//mainProgram();
+	/*mainProgram();
 	int liczba;
 	cout << "podaj liczbe: ";
 	cin >> liczba;
 	cout << "Liczba po zmianie na liczbe binarna:"; dec_to_bin(liczba); cout << endl;
-	return 0;
+	return 0;*/
+	StartProgram();
 
 }
