@@ -35,7 +35,6 @@ public:
 		this->dateBirth = dateBirth;
 		this->height = height;
 	}
-
 	Person(string name, string surname) {
 		time_t now = time(0);
 		tm* ltm = new tm;
@@ -47,7 +46,6 @@ public:
 		this->dateBirth.month = 1 + ltm->tm_mon;
 		this->dateBirth.day = ltm->tm_mday;
 	}
-
 	void CheckDate() {
 		time_t now = time(0);
 		tm* ltm = new tm;
@@ -81,7 +79,6 @@ public:
 			cout << "No\n";
 
 	}
-
 	void ShowPersonInfo() {
 		cout << "***********************************\n";
 		cout << "Name:"<<name<<"\n";
@@ -97,9 +94,6 @@ public:
 		cout << "***********************************\n";
 	
 	}
-
-
-
 
 };
 
