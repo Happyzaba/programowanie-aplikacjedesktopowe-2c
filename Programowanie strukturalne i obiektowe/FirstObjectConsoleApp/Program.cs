@@ -6,7 +6,9 @@ namespace FirstObjectConsoleApp
     {
         static void Main(string[] args)
         {
-           
+            Person p;
+            p = new Person();
+            p.ShowInfo();
         }
     }
 }

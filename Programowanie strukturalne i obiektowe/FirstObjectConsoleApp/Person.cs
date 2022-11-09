@@ -26,10 +26,13 @@ namespace FirstObjectConsoleApp
             this.surname = surname;
             this.age = age;
         }
-
-
-
-
+        public void ShowInfo() 
+        {
+            Console.WriteLine("Informacje o osobie:");
+            Console.WriteLine($"Imię: {name}");
+            Console.WriteLine($"Nazwisko: {surname}");
+            Console.WriteLine($"Wiek: {age}");
+        }
 
     }
 }
