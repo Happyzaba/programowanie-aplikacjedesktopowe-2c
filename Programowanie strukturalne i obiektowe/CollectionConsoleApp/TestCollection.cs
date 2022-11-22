@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -58,6 +59,7 @@ namespace CollectionConsoleApp
                     max = number.ourNumber;
             }
             Console.WriteLine("najwieszka liczba to: " + max);
+            //jd
         }
 
         public void TestGeneric()
