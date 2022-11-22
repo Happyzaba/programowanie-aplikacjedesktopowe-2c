@@ -59,14 +59,29 @@ namespace CollectionConsoleApp
                     max = number.ourNumber;
             }
             Console.WriteLine("najwieszka liczba to: " + max);
-            //jd
         }
 
         public void TestGeneric()
         {
+            NumberGeneric<int>[] intGenericNumbers = new NumberGeneric<int>[5];
+            NumberGeneric<float>[] floatGenericNumbers = new NumberGeneric<float>[5];
+            NumberGeneric<double>[] doubleGenericNumbers = new NumberGeneric<double>[5];
+            NumberGeneric<byte>[] byteGenericNumbers = new NumberGeneric<byte>[5];
 
+            byteGenericNumbers[2].ourNumber = 7;
 
         }
+        
+        public void ListCollection() 
+        {
+            int[] tab = new int[10];
+            List<int> ListOfInts = new List<int>();
+            Console.WriteLine("Kolecja ma elementów:" + ListOfInts.Count);
+            ListOfInts.Add(5);
+            Console.WriteLine("Kolekcja ma elementów:" + ListOfInts.Count);
+            Console.WriteLine("Zerowy element kolekcji:" + ListOfInts[0]);
+        }
+
     }
 
     class Number
