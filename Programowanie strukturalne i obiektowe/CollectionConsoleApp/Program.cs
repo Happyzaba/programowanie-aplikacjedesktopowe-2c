@@ -6,10 +6,13 @@ namespace CollectionConsoleApp
     {
         static void Main(string[] args)
         {
-            TestCollection testCollection = new TestCollection();
+            //TestCollection testCollection = new TestCollection();
             //testCollection.TestArrayCollection();
             //testCollection.TestObjectArrayCollection();
-            testCollection.ListCollection();
+            //testCollection.ListCollection();
+            TestListCollection testListCollection = new TestListCollection();
+            testListCollection.FirstTest();                 
+        
         }
     }
 }
