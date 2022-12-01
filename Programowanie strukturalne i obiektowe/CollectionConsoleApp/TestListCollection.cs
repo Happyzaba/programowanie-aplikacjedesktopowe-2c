@@ -121,5 +121,9 @@ namespace CollectionConsoleApp
             return FirstNumber > SecondNumber;
 
         }
+        /*private Person CheckPerson(Perrson firstPerosn,Person secondPerson)
+        {
+            return firstPerson.age > secondPerson.age;
+        }*/
     }
 }
