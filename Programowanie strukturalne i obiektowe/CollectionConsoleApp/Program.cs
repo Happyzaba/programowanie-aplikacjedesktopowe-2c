@@ -10,9 +10,11 @@ namespace CollectionConsoleApp
             //testCollection.TestArrayCollection();
             //testCollection.TestObjectArrayCollection();
             //testCollection.ListCollection();
-            TestListCollection testListCollection = new TestListCollection();
-            testListCollection.FirstTest();                 
-        
+            //TestListCollection testListCollection = new TestListCollection();
+            //testListCollection.FirstTest();                 
+
+            TestListOfObject testListOfObject = new TestListOfObject();
+            testListOfObject.Test();
         }
     }
 }

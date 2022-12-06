@@ -1,13 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Linq.Expressions;
-using System.Net.Http;
 using System.Text;
-using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace CollectionConsoleApp
@@ -18,58 +12,59 @@ namespace CollectionConsoleApp
         {
             Random random = new Random();
 
-            List<int> ListOfInts = new List<int>();
+            List<int> listOfInts = new List<int>();
             for (int i = 0; i < 5; i++)
             {
-                ListOfInts.Add(random.Next(1, 11));
+                listOfInts.Add(random.Next(1, 11));
             }
             Console.WriteLine("Lista int'ów:");
-            foreach (int element in ListOfInts)
+            foreach (int element in listOfInts)
             {
-                Console.Write(element + "\n");
+                Console.Write(element + ", "+"\n");
             }
             Console.WriteLine();
 
-            List<double> ListOfDoubles = new List<double>();
+            List<double> listOfDoubles = new List<double>();
             for (int i = 0; i < 5; i++)
             {
                 double number = random.NextDouble() * 10 + 1;
                 number = Math.Round(number, 4);
 
-
-                ListOfDoubles.Add(number);
+                listOfDoubles.Add(number);
             }
             Console.WriteLine("Lista double'ów:");
-            foreach (double element in ListOfDoubles)
+            foreach (double element in listOfDoubles)
             {
-                Console.Write(element + "\n");
+                Console.Write(element + ", "+"\n");
             }
-
             Console.WriteLine();
 
-            //int MaxInt = MaxFromInts(ListOfInts);
-            int MaxInt = MaxFromAllTypes<int>(ListOfInts, CheckInt);
-            Console.WriteLine("Max w liście int'ów to: " + MaxInt);
+            //int max = MaxFromInts(listOfInts);
+            //int max = MaxFromAllTypes<int>(listOfInts, CheckInt);
+            int max = MaxFromAllTypes<int>(listOfInts,
+                (int firstNumber, int secondNumber) =>
+                {
+                    return firstNumber > secondNumber;
+                });
+            Console.WriteLine("Max w liście int'ów: " + max);
 
-            //double MaxDouble = MaxFromDoubles(ListOfDoubles);
-            double MaxDouble = MaxFromAllTypes<double>(ListOfDoubles, CheckDouble);
-            Console.WriteLine("Max w liscie double'ów to: "+ MaxDouble);
+            //double maxDouble = MaxFromDoubles(listOfDoubles);
+            //double maxDouble = MaxFromAllTypes<double>(listOfDoubles, CheckDouble);
+            double maxDouble = MaxFromAllTypes<double>(listOfDoubles, (double firstNumber, double secondNumber) => firstNumber > secondNumber);
+            Console.WriteLine("Max w liście double'ów: " + maxDouble);
+
+            List<int> newlistOfInts = GetNewCollection(listOfInts, x => {return x > 5;});
+            Console.WriteLine("Lista intów większa od 5");
+            foreach (int item in newlistOfInts)
+            {
+                Console.Write(item + ", ");
+            }
+            Console.WriteLine();
         }
 
         private int MaxFromInts(List<int> list)
         {
             int max = list[0];
-            foreach (int item in list)
-	        {
-            if(item > max)
-                max = item;
-	        }
-            return max;
-        } 
-
-        private double MaxFromDoubles(List<double> list)
-        {
-            double max = list[0];
             foreach (int item in list)
             {
                 if (item > max)
@@ -78,7 +73,20 @@ namespace CollectionConsoleApp
             return max;
         }
 
-        private T MaxFromAllTypes<T>(List<T> list, Func<T,T,bool> check)
+        private double MaxFromDoubles(List<double> list)
+        {
+            double max = list[0];
+            foreach (double item in list)
+            {
+                if (item > max)
+                    max = item;
+            }
+            return max;
+        }
+
+        //Action
+        //Func
+        private T MaxFromAllTypes<T>(List<T> list, Func<T, T, bool> check)
         {
             T max = list[0];
             foreach (T item in list)
@@ -88,14 +96,12 @@ namespace CollectionConsoleApp
                     if (CheckInt(int.Parse(item.ToString()), int.Parse(max.ToString())))
                         max = item;
                 }
-
                 if (item is double)
                 {
                     if (CheckDouble(double.Parse(item.ToString()), double.Parse(max.ToString())))
                         max = item;
-                }
-
-                if (item is Person)
+                }*/
+                /*if (item is Person)
                 {
                     if (CheckPerson(item as Person, max as Person)
                         max = item;
@@ -103,27 +109,37 @@ namespace CollectionConsoleApp
 
                 /*if (item > max)
                     max = item;*/
-
                 if (check(item, max))
                     max = item;
             }
             return max;
         }
 
-        private bool CheckInt(int FirstNumber, int SecondNumber)
+        private bool CheckInt(int firstNumber, int secondNumber)
         {
-            return FirstNumber > SecondNumber;
-
+            return firstNumber > secondNumber;
         }
 
-        private bool CheckDouble(double FirstNumber, double SecondNumber)
+        private bool CheckDouble(double firstNumber, double secondNumber)
         {
-            return FirstNumber > SecondNumber;
-
+            return firstNumber > secondNumber;
         }
-        /*private Person CheckPerson(Perrson firstPerosn,Person secondPerson)
+
+        /*private Person CheckPersonAge(Person firstPerson, Person secondPerson)
         {
             return firstPerson.age > secondPerson.age;
         }*/
+
+        public List<T> GetNewCollection<T>(List<T> list, Func<T, bool> check)
+        {
+            List<T> newCollection = new List<T>();
+            foreach (T item in list)
+            {
+                if (check(item))
+                    newCollection.Add(item);
+            }
+            return newCollection;
+        }
+
     }
 }
