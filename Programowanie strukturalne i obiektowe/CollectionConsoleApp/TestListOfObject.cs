@@ -53,7 +53,7 @@ namespace CollectionConsoleApp
             {
                 p.Info();
                 Console.WriteLine("-------------------------");
-            }
+            }        
             Console.WriteLine();
             
             int age = listOfPeople.Min(x => x.age);
