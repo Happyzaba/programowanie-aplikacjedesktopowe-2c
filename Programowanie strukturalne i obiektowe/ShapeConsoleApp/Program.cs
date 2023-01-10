@@ -7,11 +7,15 @@ namespace ShapeConsoleApp
     {
         static void Main()
         {
-            Rectangle firstRectangle = new Rectangle();
-            firstRectangle.ShowInfo();
+            Rectangle firstRectangle = new Rectangle("Prostokąt 1");
+            double area = firstRectangle.Area();                          
 
-            Rectangle secondRectangle = new Rectangle(54, 29);
+            Rectangle secondRectangle = new Rectangle("Prostokąt 2",54, 29);
             secondRectangle.ShowInfo();
+
+            Square firstSquare = new Square("Kwadrat Marcin");
+            firstSquare.ShowInfo();
+
         }
     }
 }

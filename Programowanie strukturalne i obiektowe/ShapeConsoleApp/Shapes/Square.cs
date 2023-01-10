@@ -1,19 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Schema;
 
 namespace ShapeConsoleApp.Shapes
 {
-    class Rectangle : Tetragon
+    class Square : Rectangle
     {
-
-        public Rectangle(string name) :base(name,21,37,21,37)
-        {  
+        public Square(string name) : base(name,10, 10)
+        {
         }
 
-    public Rectangle(string name,double sideA, double sideB) : base(name, sideA,sideB, sideA, sideB)
+        public Square(string name, double sideA) :base(name, sideA, sideA)
         {
         }
 
@@ -21,6 +23,5 @@ namespace ShapeConsoleApp.Shapes
         {
             return sideA * sideB;
         }
-
     }
 }
