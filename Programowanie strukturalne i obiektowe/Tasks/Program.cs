@@ -1,5 +1,5 @@
 ﻿using System;
-#pragma region tresci
+#region tresci
 /*
 Podstawy programowania:
 
@@ -64,7 +64,7 @@ Dla zaawansowanych:
 6. Program, który na wejściu przyjmie rówanie w ONP a na wyjściu wyświetli wynik rówania.
 7. Napisz grę kółko i krzyżyk.
 */
-#pragma endregion
+#endregion
 
 namespace Tasks
 {
