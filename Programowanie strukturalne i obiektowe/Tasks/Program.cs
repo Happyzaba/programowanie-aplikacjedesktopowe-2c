@@ -66,13 +66,17 @@ Dla zaawansowanych:
 */
 #endregion
 
-namespace Tasks
+namespace LotOfTasks
 {
     class Program
     {
         static void Main(string[] args)
         {
-        
+            //CesarCode.Cesar();
+            //NDW.Euqlides();
+            //NWW.NWWCals();
+            //Pesel.GetInfoFromPesel();
+            //AS.LiczGloski();
         }
     }
 }

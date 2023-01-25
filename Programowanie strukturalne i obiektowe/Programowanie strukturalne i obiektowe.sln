@@ -79,7 +79,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShapeConsoleApp", "ShapeCon
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04.Tasks", "04.Tasks", "{F3627D09-4C97-4261-88F3-8D6A9C6C50D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasks", "Tasks\Tasks.csproj", "{CB2A57C1-6610-430B-9954-0BE5FF0260C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LotOfTasks", "Tasks\LotOfTasks.csproj", "{CB2A57C1-6610-430B-9954-0BE5FF0260C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
