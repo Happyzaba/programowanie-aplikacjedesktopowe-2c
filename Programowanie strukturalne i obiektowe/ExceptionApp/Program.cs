@@ -20,6 +20,7 @@ namespace ExceptionApp
                 divNumber = firstNumber / secondNumber;
 
                 Console.WriteLine("Wynik dzielenia: " + divNumber);
+
             }
             catch(Exception ex)
             {
