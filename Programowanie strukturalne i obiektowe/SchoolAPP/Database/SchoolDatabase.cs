@@ -1,14 +1,18 @@
-﻿using SchoolAPP.Database.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using SchoolAPP.Database.Entities;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SchoolAPP.Database
 {
-    class SchoolDatabase
+    class SchoolDatabase : DbContext 
     {
-        public List<SchoolClass> SchoolClasses { get; set; } = new List<SchoolClass>();
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            base.OnConfiguring(optionsBuilder);
+        }
+
+        public List<SchoolClass> SchoolClasses { get; set; }
+
     }
 }

@@ -1,6 +1,8 @@
 ﻿using SchoolAPP.Database;
 using SchoolAPP.Database.Entities;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace SchoolAPP
 {
@@ -27,7 +29,7 @@ namespace SchoolAPP
                 Name = "1C"
             };
             schoolDatabase.SchoolClasses.Add(schoolClass);
-
+            
             schoolClass = new SchoolClass()
             {
                 Id = 4,
@@ -37,6 +39,19 @@ namespace SchoolAPP
 
             Console.WriteLine("Lista klas w szkole: ");
             foreach (var item in schoolDatabase.SchoolClasses)
+            {
+                Console.WriteLine(item.Id + " " + item.Name);
+            }
+                                       
+            List<SchoolClass> classWithC = new List<SchoolClass>();
+            foreach (SchoolClass item in schoolDatabase.SchoolClasses)
+            {
+                if (item.Name.EndsWith("C"))
+                    classWithC.Add(item);
+            }
+
+            Console.WriteLine("Klasy kończące się na literę 'C'");
+            foreach (var item in classWithC)
             {
                 Console.WriteLine(item.Id + " " + item.Name);
             }
