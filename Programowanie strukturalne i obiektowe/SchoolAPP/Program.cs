@@ -17,7 +17,8 @@ namespace SchoolAPP
 
             schoolDatabase.SchoolClasses.Add(schoolClass);
 
-            schoolClass = new SchoolClass(){
+            schoolClass = new SchoolClass()
+            {
                 Id = 2,
                 Name = "1B"
             };
@@ -29,7 +30,7 @@ namespace SchoolAPP
                 Name = "1C"
             };
             schoolDatabase.SchoolClasses.Add(schoolClass);
-            
+
             schoolClass = new SchoolClass()
             {
                 Id = 4,
@@ -42,7 +43,7 @@ namespace SchoolAPP
             {
                 Console.WriteLine(item.Id + " " + item.Name);
             }
-                                       
+
             List<SchoolClass> classWithC = new List<SchoolClass>();
             foreach (SchoolClass item in schoolDatabase.SchoolClasses)
             {
