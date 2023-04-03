@@ -1,19 +1,23 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SchoolAPP.Database.Entities;
+using SchoolApp.Database.Entities;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace SchoolAPP.Database
+namespace SchoolApp.Database
 {
+    //add-migration CreateDatabaseMigration -outputdir Database/Migrations
     class SchoolDatabase : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite("FileName=schoolDatabase.db");
+
             base.OnConfiguring(optionsBuilder);
         }
-                                  
-        public List<SchoolClass> SchoolClasses { get; set; }
 
+        public DbSet<SchoolClass> SchoolClasses { get; set; }
     }
 }

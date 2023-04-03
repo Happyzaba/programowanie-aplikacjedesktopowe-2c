@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SchoolAPP.Database.Entities
+namespace SchoolApp.Database.Entities
 {
     class SchoolClass
     {
@@ -12,5 +12,6 @@ namespace SchoolAPP.Database.Entities
 
         public string Name { get; set; }
     }
+
 
 }
