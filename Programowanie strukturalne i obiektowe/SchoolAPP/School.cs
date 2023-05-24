@@ -52,6 +52,9 @@ namespace SchoolAPP
                     case 9:
                         ShowStudentWithClass();
                         break;
+                    case 10:
+                        ShowAllStudentsOrderBySurname();
+                        break;
                     case 0:
                         return;
 
@@ -73,6 +76,9 @@ namespace SchoolAPP
             Console.WriteLine("7. Modyfikacja ucznia");
             Console.WriteLine("8. Wyświetl wszystkich uczniow");
             Console.WriteLine("9. Wyświetlenie wszystkich uczniow z informacja o klasie ");
+            Console.WriteLine("10. Wyświetlenie wszystkich uczniow posortowanych po nazwisku");
+            Console.WriteLine("11. Wyświetlenie uczniów z warunkami");
+
             Console.WriteLine("0. Koniec programu");
         }
 
@@ -241,6 +247,32 @@ namespace SchoolAPP
             else
             {
                 Console.WriteLine("Brak ucznia w bazie");
+            }
+            Console.ReadKey();
+        }
+
+        private void ShowAllStudentsOrderBySurname()
+        {
+            Console.WriteLine("Lista uczniow");
+            foreach (Student student in schoolDatabase.Students.OrderBy(s=>s.Surname).ThenByDescending(s=>s.Surname))
+            {
+                Console.WriteLine("Id: " + student.Id);
+                Console.WriteLine("Imię: " + student.Name);
+                Console.WriteLine("Nazwisko: " + student.Surname);
+            }
+            Console.ReadKey();
+        }
+
+        private void ShowStudents()
+        {
+            Console.WriteLine("Lista uczniow");
+            foreach (Student student in schoolDatabase.Students.Where(s=>s.Name == "Adam"
+             && s.Surname.StartsWith("B")
+             && s.Surname.Contains("now")))
+            {
+                Console.WriteLine("Id: " + student.Id);
+                Console.WriteLine("Imię: " + student.Name);
+                Console.WriteLine("Nazwisko: " + student.Surname);
             }
             Console.ReadKey();
         }
