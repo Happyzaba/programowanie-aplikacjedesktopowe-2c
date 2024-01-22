@@ -42,6 +42,9 @@
             pomocToolStripMenuItem = new ToolStripMenuItem();
             textBoxNotepad = new TextBox();
             statusStripInfo = new StatusStrip();
+            openFileDialog = new OpenFileDialog();
+            saveFileDialog = new SaveFileDialog();
+            cofnijToolStripMenuItem = new ToolStripMenuItem();
             menuStripMainMenu.SuspendLayout();
             SuspendLayout();
             // 
@@ -75,6 +78,7 @@
             otwórzToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.O;
             otwórzToolStripMenuItem.Size = new Size(204, 22);
             otwórzToolStripMenuItem.Text = "Otwórz";
+            otwórzToolStripMenuItem.Click += otwórzToolStripMenuItem_Click;
             // 
             // zapiszToolStripMenuItem
             // 
@@ -82,6 +86,7 @@
             zapiszToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.S;
             zapiszToolStripMenuItem.Size = new Size(204, 22);
             zapiszToolStripMenuItem.Text = "Zapi&sz";
+            zapiszToolStripMenuItem.Click += zapiszToolStripMenuItem_Click;
             // 
             // zapiszJakoToolStripMenuItem
             // 
@@ -89,6 +94,7 @@
             zapiszJakoToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.Shift | Keys.S;
             zapiszJakoToolStripMenuItem.Size = new Size(204, 22);
             zapiszJakoToolStripMenuItem.Text = "Zapisz jako";
+            zapiszJakoToolStripMenuItem.Click += zapiszJakoToolStripMenuItem_Click;
             // 
             // toolStripMenuItem1
             // 
@@ -104,6 +110,7 @@
             // 
             // edycjaToolStripMenuItem
             // 
+            edycjaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cofnijToolStripMenuItem });
             edycjaToolStripMenuItem.Name = "edycjaToolStripMenuItem";
             edycjaToolStripMenuItem.Size = new Size(53, 20);
             edycjaToolStripMenuItem.Text = "&Edycja";
@@ -143,6 +150,23 @@
             statusStripInfo.TabIndex = 2;
             statusStripInfo.Text = "statusStripInfo";
             // 
+            // openFileDialog
+            // 
+            openFileDialog.FileName = "openFileDialog";
+            openFileDialog.Filter = "Pliki tekstowe (*.txt)|*.txt|Wszystkie Pliki|*.*";
+            // 
+            // saveFileDialog
+            // 
+            saveFileDialog.Filter = "Pliki tekstowe(*.txt)|*.txt";
+            // 
+            // cofnijToolStripMenuItem
+            // 
+            cofnijToolStripMenuItem.Name = "cofnijToolStripMenuItem";
+            cofnijToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.Z;
+            cofnijToolStripMenuItem.Size = new Size(180, 22);
+            cofnijToolStripMenuItem.Text = "Cofnij";
+            cofnijToolStripMenuItem.Click += cofnijToolStripMenuItem_Click;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -176,5 +200,8 @@
         private ToolStripSeparator toolStripMenuItem1;
         private TextBox textBoxNotepad;
         private StatusStrip statusStripInfo;
+        private OpenFileDialog openFileDialog;
+        private SaveFileDialog saveFileDialog;
+        private ToolStripMenuItem cofnijToolStripMenuItem;
     }
 }
