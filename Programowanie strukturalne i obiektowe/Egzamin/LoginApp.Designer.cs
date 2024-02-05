@@ -36,7 +36,7 @@
             labelRepeat = new Label();
             textBoxRepeat = new TextBox();
             buttonConfirm = new Button();
-            labelHello = new Label();
+            labelComunication = new Label();
             SuspendLayout();
             // 
             // labelRegister
@@ -47,7 +47,7 @@
             labelRegister.ForeColor = Color.Transparent;
             labelRegister.Location = new Point(0, 0);
             labelRegister.Name = "labelRegister";
-            labelRegister.Size = new Size(401, 40);
+            labelRegister.Size = new Size(441, 40);
             labelRegister.TabIndex = 0;
             labelRegister.Text = "Rejestruj konto";
             labelRegister.TextAlign = ContentAlignment.MiddleLeft;
@@ -83,6 +83,7 @@
             // 
             textBoxPassword.Location = new Point(5, 124);
             textBoxPassword.Name = "textBoxPassword";
+            textBoxPassword.PasswordChar = '*';
             textBoxPassword.Size = new Size(102, 23);
             textBoxPassword.TabIndex = 4;
             // 
@@ -100,6 +101,7 @@
             // 
             textBoxRepeat.Location = new Point(7, 189);
             textBoxRepeat.Name = "textBoxRepeat";
+            textBoxRepeat.PasswordChar = '*';
             textBoxRepeat.Size = new Size(102, 23);
             textBoxRepeat.TabIndex = 6;
             // 
@@ -107,29 +109,29 @@
             // 
             buttonConfirm.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             buttonConfirm.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            buttonConfirm.Location = new Point(119, 295);
+            buttonConfirm.Location = new Point(114, 279);
             buttonConfirm.Name = "buttonConfirm";
-            buttonConfirm.Size = new Size(151, 54);
+            buttonConfirm.Size = new Size(191, 57);
             buttonConfirm.TabIndex = 7;
             buttonConfirm.Text = "Zatwierdź";
             buttonConfirm.UseVisualStyleBackColor = true;
             buttonConfirm.Click += buttonConfirm_Click;
             // 
-            // labelHello
+            // labelComunication
             // 
-            labelHello.AutoSize = true;
-            labelHello.Location = new Point(140, 352);
-            labelHello.Name = "labelHello";
-            labelHello.Size = new Size(104, 15);
-            labelHello.TabIndex = 8;
-            labelHello.Text = "Witaj w programie";
+            labelComunication.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            labelComunication.AutoSize = true;
+            labelComunication.Location = new Point(166, 339);
+            labelComunication.Name = "labelComunication";
+            labelComunication.Size = new Size(0, 15);
+            labelComunication.TabIndex = 8;
             // 
             // LoginApp
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(401, 450);
-            Controls.Add(labelHello);
+            ClientSize = new Size(441, 450);
+            Controls.Add(labelComunication);
             Controls.Add(buttonConfirm);
             Controls.Add(textBoxRepeat);
             Controls.Add(labelRepeat);
@@ -154,6 +156,6 @@
         private Label labelRepeat;
         private TextBox textBoxRepeat;
         private Button buttonConfirm;
-        private Label labelHello;
+        private Label labelComunication;
     }
 }
