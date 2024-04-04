@@ -20,7 +20,7 @@ namespace Egzamin
 
                 if (password == repeat)
                 {
-                    labelComunication.Text += "Autor:ydwgayug" + System.Environment.NewLine;
+                    labelComunication.Text += "Autor:00000000000" + System.Environment.NewLine;
                     labelComunication.Text += ($"Witaj {name}") + System.Environment.NewLine;
                 }
                 else
