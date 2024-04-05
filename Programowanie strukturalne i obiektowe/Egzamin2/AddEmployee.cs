@@ -6,5 +6,14 @@ namespace Egzamin2
         {
             InitializeComponent();
         }
+
+        private void buttonConfirm_Click(object sender, EventArgs e)
+        {
+            string name = textBoxName.Text;
+            string surname = textBoxSurname.Text;
+            string position = comboBoxPosition.Text;
+
+            MessageBox.Show($"Dane pracownika: {name} {surname} {position} Has³o: ");
+        }
     }
 }
