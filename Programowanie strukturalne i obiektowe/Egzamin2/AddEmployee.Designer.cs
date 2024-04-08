@@ -181,10 +181,11 @@
             buttonPassword.ForeColor = Color.White;
             buttonPassword.Location = new Point(86, 167);
             buttonPassword.Name = "buttonPassword";
-            buttonPassword.Size = new Size(98, 21);
+            buttonPassword.Size = new Size(111, 26);
             buttonPassword.TabIndex = 0;
             buttonPassword.Text = "Generuj hasło";
             buttonPassword.UseVisualStyleBackColor = false;
+            buttonPassword.Click += buttonPassword_Click;
             // 
             // buttonConfirm
             // 
