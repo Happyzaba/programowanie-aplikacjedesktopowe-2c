@@ -2,43 +2,39 @@ namespace Egzamin2
 {
     public partial class FormAddEmployee : Form
     {
-        string UserPassword;
+        string userPassword = "";
         public FormAddEmployee()
         {
             InitializeComponent();
         }
-        private void buttonPassword_Click(object sender, EventArgs e)
-        {
 
+        private void buttonPassword_Click(object sender, EventArgs e)
+        { 
             Random random = new Random();
 
             int passwordLength = int.Parse(textBoxHowMuch.Text);
-
             string password = "";
-
             string specialSings = "!@#$%^&*()_+-=";
+            string smallLetters = "abcdefghijklmnoprstuvxyz";
+            string bigLetters = "ABCDEFGHIJKLMNOPRSTUVXYZ";
+            string numbers = "0123456789";
 
-            for (int i = 0; i < passwordLength; i++)
-            {
-
-                if (i == 0 && checkBoxSmallAndBig.Checked)
-                {
-                    password += (char)(random.Next('A', 'Z' + 1));
+            for (int i = 0; i < passwordLength; i++) {
+                if (i == 0 && checkBoxSmallAndBig.Checked) {
+                    password += bigLetters[random.Next(bigLetters.Length)];
                 }
-                else if (i == 1 && checkBoxNumbers.Checked)
-                {
-                    password += random.Next(0, 10);
+                else if (i == 1 && checkBoxNumbers.Checked) {
+                    password += numbers[random.Next(numbers.Length)];
                 }
-                else if (i == 2 && checkBoxSpecialCharacters.Checked)
-                {
-                    password += specialSings[random.Next(0, specialSings.Length)];
+                else if (i == 2 && checkBoxSpecialCharacters.Checked) {
+                    password += specialSings[random.Next(specialSings.Length)];
                 }
                 else {
-                    password += (char)random.Next('a', 'z' + 1);
+                    password += smallLetters[random.Next(smallLetters.Length)];
                 }
             }
             MessageBox.Show(password);
-            UserPassword = password;
+            userPassword = password;
         }
 
         private void buttonConfirm_Click(object sender, EventArgs e)
@@ -46,7 +42,7 @@ namespace Egzamin2
             string name = textBoxName.Text;
             string surname = textBoxSurname.Text;
             string position = comboBoxPosition.Text;
-            string password = UserPassword;
+            string password = userPassword;
 
             MessageBox.Show($"Dane pracownika: {name} {surname} {position} Has³o: {password}");
         }
