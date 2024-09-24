@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SimpleBindingCalculatorMauiApp.MainPage">
+             x:Name="thisPage"
+
+    <StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Pierwsza liczba:"
+                   Background="Bisque"
+                   FontSize="20"
+                   VerticalOptions="Center"/>
+            <Entry HorizontalOptions="FillAndExpand"
+                   Text="{Binding firstNumber}"/>
+        </StackLayout>
+        
+        <StackLayout Orientation="Horizontal">
+        <Label Text="Druga liczba:"
+                   Background="Bisque"
+                   FontSize="20"
+                   VerticalOptions="Center"/>
+        <Entry HorizontalOptions="FillAndExpand"
+                   Text="{Binding secondNumber}"/>
+    </StackLayout>
+
+    <Label Text=/>
+
+    <RadioButton Content="+"
+                     x:Name="operationAddRadioButton"/>
+    <RadioButton Content="-"
+                     x:Name="operationSubRadioButton"/>
+    <RadioButton Content="*"
+                     x:Name="operationMulRadioButton"/>
+    <RadioButton Content="/"
+                    x:Name="operationDivRadioButton"/>
+
+    <Button Text="Oblicz"
+                HorizontalOptions="Center"
+                Clicked="Button_Clicked"/>
+
+    <Label x:Name="resultLabel"/>
+
+    </StackLayout>
+
+</ContentPage>
