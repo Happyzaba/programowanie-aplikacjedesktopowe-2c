@@ -2,17 +2,17 @@
 {
     public partial class MainPage : ContentPage
     {
-        public string Value { get; set; }
-        public string FirstNumber { get; set; }
-        public string SecondNumber { get; set; }
-
         public MainPage()
         {
             InitializeComponent();
+
         }
+
         private void Button_Clicked(object sender, EventArgs e)
         {
-            
+            string strFirstNumber = firstNumberEntry.Text;
+            //int firstNumber = int.Parse(strFirstNumber);
+
             int firstNumber;
             if (!int.TryParse(strFirstNumber, out firstNumber))
             {
@@ -47,9 +47,10 @@
             {
                 result = firstNumber / secondNumber;
             }
-            resultLabel.Text = "Wartość" + Value;
+            resultLabel.Text = $"Wynik operacji {result}";
             resultLabel.TextColor = Colors.Pink;
         }
     }
+
 }
 

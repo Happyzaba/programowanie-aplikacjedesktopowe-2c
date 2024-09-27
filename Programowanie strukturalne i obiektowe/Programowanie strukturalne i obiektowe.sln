@@ -113,7 +113,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Egzamin2", "Egzamin2\Egzami
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MAUI", "MAUI", "{B3DFD454-FF55-408E-B446-563F68435B0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleBindingCalculatorMauiApp", "SimpleBindingCalculatorMauiApp\SimpleBindingCalculatorMauiApp.csproj", "{E284DAF3-5D0C-49EC-B164-0765C0AED995}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleBindingCalculatorMauiApp", "SimpleBindingCalculatorMauiApp\SimpleBindingCalculatorMauiApp.csproj", "{E284DAF3-5D0C-49EC-B164-0765C0AED995}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShowCollectionMauiApp", "ShowCollectionMauiApp\ShowCollectionMauiApp.csproj", "{DC8258A2-7641-4510-93E8-3768C54C5B9C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -492,6 +494,24 @@ Global
 		{E284DAF3-5D0C-49EC-B164-0765C0AED995}.Release|x86.ActiveCfg = Release|Any CPU
 		{E284DAF3-5D0C-49EC-B164-0765C0AED995}.Release|x86.Build.0 = Release|Any CPU
 		{E284DAF3-5D0C-49EC-B164-0765C0AED995}.Release|x86.Deploy.0 = Release|Any CPU
+		{DC8258A2-7641-4510-93E8-3768C54C5B9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC8258A2-7641-4510-93E8-3768C54C5B9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC8258A2-7641-4510-93E8-3768C54C5B9C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DC8258A2-7641-4510-93E8-3768C54C5B9C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{DC8258A2-7641-4510-93E8-3768C54C5B9C}.Debug|x64.Build.0 = Debug|Any CPU
+		{DC8258A2-7641-4510-93E8-3768C54C5B9C}.Debug|x64.Deploy.0 = Debug|Any CPU
+		{DC8258A2-7641-4510-93E8-3768C54C5B9C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DC8258A2-7641-4510-93E8-3768C54C5B9C}.Debug|x86.Build.0 = Debug|Any CPU
+		{DC8258A2-7641-4510-93E8-3768C54C5B9C}.Debug|x86.Deploy.0 = Debug|Any CPU
+		{DC8258A2-7641-4510-93E8-3768C54C5B9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC8258A2-7641-4510-93E8-3768C54C5B9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC8258A2-7641-4510-93E8-3768C54C5B9C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{DC8258A2-7641-4510-93E8-3768C54C5B9C}.Release|x64.ActiveCfg = Release|Any CPU
+		{DC8258A2-7641-4510-93E8-3768C54C5B9C}.Release|x64.Build.0 = Release|Any CPU
+		{DC8258A2-7641-4510-93E8-3768C54C5B9C}.Release|x64.Deploy.0 = Release|Any CPU
+		{DC8258A2-7641-4510-93E8-3768C54C5B9C}.Release|x86.ActiveCfg = Release|Any CPU
+		{DC8258A2-7641-4510-93E8-3768C54C5B9C}.Release|x86.Build.0 = Release|Any CPU
+		{DC8258A2-7641-4510-93E8-3768C54C5B9C}.Release|x86.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -549,6 +569,7 @@ Global
 		{FB396900-34F4-41E5-BE70-494DEF9D1CDF} = {5B090A30-B6E3-406B-ADB6-FA2695A858CB}
 		{26DFF1B4-7D9B-4E83-901D-21C17CF02B9E} = {5B090A30-B6E3-406B-ADB6-FA2695A858CB}
 		{E284DAF3-5D0C-49EC-B164-0765C0AED995} = {B3DFD454-FF55-408E-B446-563F68435B0F}
+		{DC8258A2-7641-4510-93E8-3768C54C5B9C} = {B3DFD454-FF55-408E-B446-563F68435B0F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {76EC34DF-6BC3-4283-8128-050FEAB28534}
