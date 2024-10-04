@@ -1,4 +1,6 @@
-﻿using System.Collections.ObjectModel;
+﻿using Microsoft.Maui.Graphics.Text;
+using System.Collections.ObjectModel;
+using System.Reflection.Metadata;
 
 namespace UnitsChangerMauiApp
 {
@@ -36,9 +38,85 @@ namespace UnitsChangerMauiApp
 
         private void Button_Clicked(object sender, EventArgs e)
         {
+            double result = Convert.ToDouble(ChangedUnit);
 
+            switch (FirstSelectedUnit)
+            {
+                case "mm":
+                    if (SecondSelectedUnit == "mm") {
+                        ChangedUnitMessage = "Liczba po zamianie " + result + SecondSelectedUnit; 
+                    }
+                    if (SecondSelectedUnit == "cm")
+                    {
+                        ChangedUnitMessage = "Liczba po zamianie " + result *0.1 + SecondSelectedUnit;
+                    }
+                    if (SecondSelectedUnit == "m")
+                    {
+                        ChangedUnitMessage = "Liczba po zamianie " + result * 0.001 + SecondSelectedUnit;
+                    }
+                    if (SecondSelectedUnit == "km")
+                    {
+                        ChangedUnitMessage = "Liczba po zamianie " + result * 0.000001 + SecondSelectedUnit;
+                    }
+                    break;
+                case "cm":
+                    if (SecondSelectedUnit == "mm")
+                    {
+                        ChangedUnitMessage = "Liczba po zamianie " + result * 10 + SecondSelectedUnit;
+                    }
+                    if (SecondSelectedUnit == "cm")
+                    {
+                        ChangedUnitMessage = "Liczba po zamianie " + result + SecondSelectedUnit;
+                    }
+                    if (SecondSelectedUnit == "m")
+                    {
+                        ChangedUnitMessage = "Liczba po zamianie " + result * 0.01 + SecondSelectedUnit;
+                    }
+                    if (SecondSelectedUnit == "km")
+                    {
+                        ChangedUnitMessage = "Liczba po zamianie " + result * 0.00001 + SecondSelectedUnit;
+                    }
+                    break;
+                case "m":
+                    if (SecondSelectedUnit == "mm")
+                    {
+                        ChangedUnitMessage = "Liczba po zamianie " + result * 1000 + SecondSelectedUnit;
+                    }
+                    if (SecondSelectedUnit == "cm")
+                    {
+                        ChangedUnitMessage = "Liczba po zamianie " + result * 100 + SecondSelectedUnit;
+                    }
+                    if (SecondSelectedUnit == "m")
+                    {
+                        ChangedUnitMessage = "Liczba po zamianie " + result + SecondSelectedUnit;
+                    }
+                    if (SecondSelectedUnit == "km")
+                    {
+                        ChangedUnitMessage = "Liczba po zamianie " + result * 0.001 + SecondSelectedUnit;
+                    }
+                    break;
+                case "km":
+                    if (SecondSelectedUnit == "mm")
+                    {
+                        ChangedUnitMessage = "Liczba po zamianie " + result * 1000000 + SecondSelectedUnit;
+                    }
+                    if (SecondSelectedUnit == "cm")
+                    {
+                        ChangedUnitMessage = "Liczba po zamianie " + result * 100000 + SecondSelectedUnit;
+                    }
+                    if (SecondSelectedUnit == "m")
+                    {
+                        ChangedUnitMessage = "Liczba po zamianie " + result * 1000 + SecondSelectedUnit;
+                    }
+                    if (SecondSelectedUnit == "km")
+                    {
+                        ChangedUnitMessage = "Liczba po zamianie " + result + SecondSelectedUnit;
+                    }
+                    break;
+                default:
+                    break;
+            }
 
-            ChangedUnitMessage = " Liczba po zamianie " + SecondSelectedUnit;
         }
     }
 

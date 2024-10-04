@@ -20,13 +20,13 @@
                 <Picker ItemsSource="{Binding UnitsList}"
                         SelectedItem="{Binding SecondSelectedUnit}"/>
             </HorizontalStackLayout>
-    
             <Label Text="Podaj liczbe do zamienienia"/>
                 <Entry Text="{Binding ChangedUnit}"/>
                 <Button Text="Oblicz"
                             Clicked="Button_Clicked"/>
                 <Label Text="{Binding ChangedUnitMessage}"/>
             </VerticalStackLayout>
+            
 
     </ScrollView>
 
