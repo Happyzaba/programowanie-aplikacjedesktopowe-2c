@@ -43,25 +43,27 @@ namespace UnitsChangerMauiApp
             switch (FirstSelectedUnit)
             {
                 case "mm":
-                    if (SecondSelectedUnit == "mm") {
-                        ChangedUnitMessage = "Liczba po zamianie " + result + SecondSelectedUnit; 
-                    }
-                    if (SecondSelectedUnit == "cm")
+                    switch (SecondSelectedUnit)
                     {
-                        ChangedUnitMessage = "Liczba po zamianie " + result *0.1 + SecondSelectedUnit;
-                    }
-                    if (SecondSelectedUnit == "m")
-                    {
-                        ChangedUnitMessage = "Liczba po zamianie " + result * 0.001 + SecondSelectedUnit;
-                    }
-                    if (SecondSelectedUnit == "km")
-                    {
-                        ChangedUnitMessage = "Liczba po zamianie " + result * 0.000001 + SecondSelectedUnit;
+                        case "mm":
+                            ChangedUnitMessage = "Liczba po zamianie " + result + SecondSelectedUnit;
+                            break;
+
+                        case "cm":
+                            ChangedUnitMessage = "Liczba po zamianie " + result * 0.1 + SecondSelectedUnit;
+                            break;
+
+                        case "m":
+                            ChangedUnitMessage = "Liczba po zamianie " + result * 0.001 + SecondSelectedUnit;
+                            break;
+
+                        case "km":
+                            ChangedUnitMessage = "Liczba po zamianie " + result * 0.000001 + SecondSelectedUnit;
+                            break;
                     }
                     break;
                 case "cm":
-                    if (SecondSelectedUnit == "mm")
-                    {
+                    if (SecondSelectedUnit == "mm") {
                         ChangedUnitMessage = "Liczba po zamianie " + result * 10 + SecondSelectedUnit;
                     }
                     if (SecondSelectedUnit == "cm")

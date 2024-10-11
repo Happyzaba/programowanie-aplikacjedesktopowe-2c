@@ -1,6 +1,12 @@
-﻿namespace SimpleBindingCalculatorMauiApp
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MvvmSimpleBindingCalculatorMauiApp
 {
-    public partial class MainPage : ContentPage
+    public class CalculatorViewModel : BindableObject
     {
         public string FirstNumber { get; set; }
         public string SecondNumber { get; set; }
@@ -22,14 +28,18 @@
             get { return colorMessage; }
             set { colorMessage = value; OnPropertyChanged(); }
         }
+        private Command calculateCommand;
 
-
-        public MainPage()
+        public Command CalcaulateCommand
         {
-            InitializeComponent();
+            get { return calculateCommand; }
+            set { calculateCommand = value; }
         }
-
-        private void Button_Clicked(object sender, EventArgs e)
+        public CalculatorViewModel() 
+            {
+            calculateCommand = new Command(Calculate);
+            }
+        private void Calculate()
         {
             int firstNumber;
             if (!int.TryParse(FirstNumber, out firstNumber))
@@ -69,5 +79,4 @@
             ColorMessage = Colors.Pink;
         }
     }
-
 }

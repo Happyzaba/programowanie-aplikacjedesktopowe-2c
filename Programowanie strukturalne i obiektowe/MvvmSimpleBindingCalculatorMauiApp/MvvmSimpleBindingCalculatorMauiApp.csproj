@@ -6,17 +6,17 @@
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
 		<!-- <TargetFrameworks>$(TargetFrameworks);net7.0-tizen</TargetFrameworks> -->
 		<OutputType>Exe</OutputType>
-		<RootNamespace>SimpleBindingCalculatorMauiApp</RootNamespace>
+		<RootNamespace>MvvmSimpleBindingCalculatorMauiApp</RootNamespace>
 		<UseMaui>true</UseMaui>
 		<SingleProject>true</SingleProject>
 		<ImplicitUsings>enable</ImplicitUsings>
 
 		<!-- Display name -->
-		<ApplicationTitle>SimpleBindingCalculatorMauiApp</ApplicationTitle>
+		<ApplicationTitle>MvvmSimpleBindingCalculatorMauiApp</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.simplebindingcalculatormauiapp</ApplicationId>
-		<ApplicationIdGuid>1f2bce91-46ae-4160-906e-e4f5a97033db</ApplicationIdGuid>
+		<ApplicationId>com.companyname.mvvmsimplebindingcalculatormauiapp</ApplicationId>
+		<ApplicationIdGuid>cda8fb73-2167-4d82-af8f-a3fac02f0125</ApplicationIdGuid>
 
 		<!-- Versions -->
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>

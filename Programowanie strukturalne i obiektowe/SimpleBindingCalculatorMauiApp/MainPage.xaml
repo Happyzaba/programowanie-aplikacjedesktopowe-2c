@@ -1,45 +1,47 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SimpleBindingCalculatorMauiApp.MainPage">
+             x:Class="SimpleBindingCalculatorMauiApp.MainPage"
              x:Name="thisPage"
+             BindingContext="{x:Reference thisPage}"
+             Title="{Binding ResultMessage}">
 
     <StackLayout>
-        <StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Pierwsza liczba:"
-                   Background="Bisque"
-                   FontSize="20"
-                   VerticalOptions="Center"/>
-                <Entry HorizontalOptions="FillAndExpand"
-                   x:Name="firstNumberEntry"/>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Pierwsza liczba:"
+               Background="Bisque"
+               FontSize="20"
+               VerticalOptions="Center"/>
+            <Entry HorizontalOptions="FillAndExpand"
+                   Text="{Binding FirstNumber}"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
             <Label Text="Druga liczba:"
                    Background="Bisque"
                    FontSize="20"
                    VerticalOptions="Center"/>
             <Entry HorizontalOptions="FillAndExpand"
-                   x:Name="secondNumberEntry"/>
+                   Text="{Binding SecondNumber}"/>
         </StackLayout>
 
-        <Label Text="Operacja do wykonania:"/>
+    <Label Text="Operacja do wykonania:"/>
 
-        <RadioButton Content="+"
-                     x:Name="operationAddRadioButton"/>
-        <RadioButton Content="-"
-                     x:Name="operationSubRadioButton"/>
-        <RadioButton Content="*"
-                     x:Name="operationMulRadioButton"/>
-        <RadioButton Content="/"
-                     x:Name="operationDivRadioButton"/>
+    <RadioButton Content="+"
+                 IsChecked="{Binding IsOperationAdd}"/>
+    <RadioButton Content="-"
+                 IsChecked="{Binding IsOperationSub}"/>
+    <RadioButton Content="*"
+                 IsChecked="{Binding IsOperationMul}"/>
+    <RadioButton Content="/"
+                 IsChecked="{Binding IsOperationDiv}"/>
 
-        <Button Text="Oblicz"
-                HorizontalOptions="Center"
-                Clicked="Button_Clicked"/>
+    <Button Text="Oblicz"
+            HorizontalOptions="Center"
+            Clicked="Button_Clicked"/>
 
-        <Label x:Name="resultLabel"/>
-                
+    <Label Text="{Binding ResultMessage}"
+           TextColor="{Binding ColorMessage}"/>
+
     </StackLayout>
 
 </ContentPage>
