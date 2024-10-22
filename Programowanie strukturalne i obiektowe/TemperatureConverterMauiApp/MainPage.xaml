@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ViewModel="clr-namespace:TemperatureConverterMauiApp"
+             x:Class="TemperatureConverterMauiApp.MainPage">
+    <ContentPage.BindingContext>
+        <ViewModel:TemperatureViewModel/>
+    </ContentPage.BindingContext>
+    <ScrollView>
+        <VerticalStackLayout>
+            <HorizontalStackLayout>
+                <Label>
+                    <Label.Text>Zamien z:</Label.Text>
+                </Label>
+                <Picker ItemsSource="{Binding TemperatureList}"
+                    SelectedItem="{Binding FirstSelectedTemperature}"/>
+                <Label>
+                    <Label.Text>Zamien na:</Label.Text>
+                </Label>
+                <Picker ItemsSource="{Binding TemperatureList}"
+                    SelectedItem="{Binding SecondSelectedTemperature}"/>
+            </HorizontalStackLayout>
+            <Label Text="Podaj liczbe do zamienienia"/>
+            <Entry Text="{Binding ChangedTemp}"/>
+            <Button Text="Oblicz"
+                        Command="{Binding ButtonClicked}"/>
+            <Label Text="{Binding ChangedTempMessage}"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+
+
+</ContentPage>
