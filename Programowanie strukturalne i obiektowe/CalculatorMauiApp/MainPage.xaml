@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CalculatorMauiApp.MainPage"
-             xmlns:viewModel ="clr-namespace:CalculatorMauiApp">
+             xmlns:viewModel ="clr-namespace:CalculatorMauiApp"
+             Title="Calculator">
 
     <ContentPage.BindingContext>
         <viewModel:CalculatorViewModel/>
@@ -16,7 +17,9 @@
                Grid.Column="0"
                Grid.ColumnSpan="5"
               BackgroundColor="DarkGray"
-               Text="{Binding CalculatingResult}"/>
+               Text="{Binding CalculatingResult}"
+               FontSize="150"
+               HorizontalTextAlignment="End"/>
         <Button Text="7"
             Grid.Column="0"
             Grid.Row="1"
@@ -67,6 +70,27 @@
             Grid.ColumnSpan="3"
             Grid.Row="4"
             Command="{Binding NumberCommand}"
+            CommandParameter="{Binding Text,Source={x:RelativeSource Self}}"/>
+
+        <Button Text="+"
+            Grid.Column="3"
+            Grid.Row="1"
+            Command="{Binding OperationCommand}"
+            CommandParameter="{Binding Text,Source={x:RelativeSource Self}}"/>
+        <Button Text="-"
+            Grid.Column="3"
+            Grid.Row="2"
+            Command="{Binding OperationCommand}"
+            CommandParameter="{Binding Text,Source={x:RelativeSource Self}}"/>
+        <Button Text="*"
+            Grid.Column="3"
+            Grid.Row="3"
+            Command="{Binding OperationCommand}"
+            CommandParameter="{Binding Text,Source={x:RelativeSource Self}}"/>
+        <Button Text="/"
+            Grid.Column="3"
+            Grid.Row="4"
+            Command="{Binding OperationCommand}"
             CommandParameter="{Binding Text,Source={x:RelativeSource Self}}"/>
     </Grid>
     

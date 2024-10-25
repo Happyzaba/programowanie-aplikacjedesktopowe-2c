@@ -39,22 +39,22 @@ namespace TemperatureConverterMauiApp
             switch(FirstSelectedTemperature){
                 case "C":
                     if (SecondSelectedTemperature == "C") {
-                        ChangedTempMessage = "Temperatura po zmianie " + result + SecondSelectedTemperature;
+                        ChangedTempMessage = "Temperatura po zmianie " + result + "°" + SecondSelectedTemperature;
                     }     
                     if (SecondSelectedTemperature == "F") {
                         result = (result *9/5) + 32;
-                        ChangedTempMessage = "Temperatura po zmianie " + result + SecondSelectedTemperature;
+                        ChangedTempMessage = "Temperatura po zmianie " + result  + SecondSelectedTemperature;
                     }
                     break;
                 case "F":
                     if (SecondSelectedTemperature == "C")
                     {
                         result = (result - 32) * 5/9;
-                        ChangedTempMessage = "Temperatura po zmianie " + result + SecondSelectedTemperature;
+                        ChangedTempMessage = "Temperatura po zmianie " + result + "°" + SecondSelectedTemperature;
                     }
                     if (SecondSelectedTemperature == "F")
                     {
-                        ChangedTempMessage = "Temperatura po zmianie " + result + SecondSelectedTemperature;
+                        ChangedTempMessage = "Temperatura po zmianie " + result  + SecondSelectedTemperature;
                     }
                     break;
             }

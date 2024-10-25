@@ -121,9 +121,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitsChangerMauiApp", "Unit
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvvmSimpleBindingCalculatorMauiApp", "MvvmSimpleBindingCalculatorMauiApp\MvvmSimpleBindingCalculatorMauiApp.csproj", "{8F009271-5781-47C1-8802-D363F55E28D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemperatureConverterMauiApp", "TemperatureConverterMauiApp\TemperatureConverterMauiApp.csproj", "{6423579B-CBA0-4F12-8681-81D435641313}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TemperatureConverterMauiApp", "TemperatureConverterMauiApp\TemperatureConverterMauiApp.csproj", "{6423579B-CBA0-4F12-8681-81D435641313}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorMauiApp", "CalculatorMauiApp\CalculatorMauiApp.csproj", "{946BE07E-300F-447A-A88F-56030A54FE0D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculatorMauiApp", "CalculatorMauiApp\CalculatorMauiApp.csproj", "{946BE07E-300F-447A-A88F-56030A54FE0D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DC154EBD-3D06-48DE-B341-B0896AABD3B3}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
