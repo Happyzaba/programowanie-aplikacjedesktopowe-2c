@@ -130,6 +130,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConverterMauiApp", "ConverterMauiApp\ConverterMauiApp.csproj", "{CA684E5C-9740-42AE-BB5A-9A6B71B1184E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -597,6 +599,24 @@ Global
 		{946BE07E-300F-447A-A88F-56030A54FE0D}.Release|x86.ActiveCfg = Release|Any CPU
 		{946BE07E-300F-447A-A88F-56030A54FE0D}.Release|x86.Build.0 = Release|Any CPU
 		{946BE07E-300F-447A-A88F-56030A54FE0D}.Release|x86.Deploy.0 = Release|Any CPU
+		{CA684E5C-9740-42AE-BB5A-9A6B71B1184E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA684E5C-9740-42AE-BB5A-9A6B71B1184E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA684E5C-9740-42AE-BB5A-9A6B71B1184E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{CA684E5C-9740-42AE-BB5A-9A6B71B1184E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{CA684E5C-9740-42AE-BB5A-9A6B71B1184E}.Debug|x64.Build.0 = Debug|Any CPU
+		{CA684E5C-9740-42AE-BB5A-9A6B71B1184E}.Debug|x64.Deploy.0 = Debug|Any CPU
+		{CA684E5C-9740-42AE-BB5A-9A6B71B1184E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CA684E5C-9740-42AE-BB5A-9A6B71B1184E}.Debug|x86.Build.0 = Debug|Any CPU
+		{CA684E5C-9740-42AE-BB5A-9A6B71B1184E}.Debug|x86.Deploy.0 = Debug|Any CPU
+		{CA684E5C-9740-42AE-BB5A-9A6B71B1184E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA684E5C-9740-42AE-BB5A-9A6B71B1184E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA684E5C-9740-42AE-BB5A-9A6B71B1184E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{CA684E5C-9740-42AE-BB5A-9A6B71B1184E}.Release|x64.ActiveCfg = Release|Any CPU
+		{CA684E5C-9740-42AE-BB5A-9A6B71B1184E}.Release|x64.Build.0 = Release|Any CPU
+		{CA684E5C-9740-42AE-BB5A-9A6B71B1184E}.Release|x64.Deploy.0 = Release|Any CPU
+		{CA684E5C-9740-42AE-BB5A-9A6B71B1184E}.Release|x86.ActiveCfg = Release|Any CPU
+		{CA684E5C-9740-42AE-BB5A-9A6B71B1184E}.Release|x86.Build.0 = Release|Any CPU
+		{CA684E5C-9740-42AE-BB5A-9A6B71B1184E}.Release|x86.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -659,6 +679,7 @@ Global
 		{8F009271-5781-47C1-8802-D363F55E28D3} = {B3DFD454-FF55-408E-B446-563F68435B0F}
 		{6423579B-CBA0-4F12-8681-81D435641313} = {B3DFD454-FF55-408E-B446-563F68435B0F}
 		{946BE07E-300F-447A-A88F-56030A54FE0D} = {B3DFD454-FF55-408E-B446-563F68435B0F}
+		{CA684E5C-9740-42AE-BB5A-9A6B71B1184E} = {B3DFD454-FF55-408E-B446-563F68435B0F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {76EC34DF-6BC3-4283-8128-050FEAB28534}

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ConverterMauiApp.MainPage"
+             xmlns:converters="clr-namespace:ConverterMauiApp.Converters">
+    <ContentPage.Resources>
+        <converters:GradeToTextGradeConverter x:Key="GradeToTextGradeConverter"/>
+        <converters:BoolToColorConverter x:Key="BoolToColorCoverter"/>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <Label Text="wprowadź ocenę ucznia:"/>
+        <Entry x:Name="gradeEntry"
+               Text=""/>
+        <Label Text="{Binding Text,Source={x:Reference gradeEntry}, Converter={x:StaticResource GradeToTextGradeConverter}}"/>
+
+        <Label Text="Zaznaczony - zielony; niezanaczony - czerwony"/>
+        <CheckBox IsChecked="False"
+                  x:Name="colorChangeCheckBox"/>
+        <Label Text="Ten kolor teksty bedzie się zmieniał"
+               TextColor="{Binding IsChecked,Source={x:Reference colorChangeCheckBox},Converter={x:StaticResource BoolToColorCoverter}}"/>
+
+
+    </StackLayout>
+
+</ContentPage>
