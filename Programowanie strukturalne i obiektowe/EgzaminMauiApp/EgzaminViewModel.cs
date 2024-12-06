@@ -8,6 +8,6 @@ namespace EgzaminMauiApp
 {
     internal class EgzaminViewModel : BindableObject
     {
-
+        //tu bedzie kod
     }
 }
