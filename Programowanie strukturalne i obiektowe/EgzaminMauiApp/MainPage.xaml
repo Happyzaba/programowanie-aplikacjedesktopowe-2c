@@ -19,6 +19,7 @@
                 Padding="10"/>
             <Button 
                 Text="RZUĆ KOŚCIMI"
+                Command="{Binding ThrowDiceCommand}"
                 BackgroundColor="#D2691E"
                 HorizontalOptions="Center"
                 Margin="10"/>
@@ -50,17 +51,16 @@
             </StackLayout>
 
             <Label
-                x:Name="wynikLosowaniaLabel"
                 Text="Wynik tego losowania: 0"
                 HorizontalOptions="Center"
                 Margin="10,10"/>
             <Label
-                x:Name="wynikGryLabel"
                 Text="Wynik gry: 0"
                 HorizontalOptions="Center"
                 Margin="10,10"/>
             <Button
                 Text="RESETUJ WYNIK"
+                Command="{Binding ResetResultCommand}"
                 BackgroundColor="#D2691E"
                 HorizontalOptions="Center"
                 Margin="10,10"/>

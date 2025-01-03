@@ -8,6 +8,22 @@ namespace EgzaminMauiApp
 {
     internal class EgzaminViewModel : BindableObject
     {
-        //tu bedzie kod
-    }
+        private Random draw = new Random();
+
+		private int gameResult;
+		public int GameResult
+		{
+			get { return gameResult; }
+			set { gameResult = value; OnPropertyChanged(); }
+		}
+
+		private int drawResult;
+		public int DrawResult
+		{
+			get { return drawResult; }
+			set { drawResult = value; }
+		}
+
+
+	}
 }
