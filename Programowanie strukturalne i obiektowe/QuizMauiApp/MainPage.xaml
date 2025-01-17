@@ -25,13 +25,14 @@
                         Command="{Binding NextQuestion}"
                          WidthRequest="300"/>
                 <Button Text="Sprawdz"
-                         WidthRequest="300"
-                        Command="{Binding CheckCorrectAnswer}"/>
+                        Command="{Binding GetFinalScore}"
+                         WidthRequest="300"/>
                 <Button Text="Od nowa"
+                        Command="{Binding Reset}"
                          WidthRequest="300"/>
 
             </HorizontalStackLayout>
-            <Label Text="{Binding AnswerMessage}"/>
+            <Label Text="{Binding ShowFinalScore}"></Label>
         </VerticalStackLayout>
     </StackLayout>
 </ContentPage>
