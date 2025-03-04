@@ -192,8 +192,7 @@ namespace QuizMauiApp
             questions.Add(questionTwo);
             Question questionThree = new Question(questions.Count, "Co to za znak: Σ", "Omega", "Alfa", "Sigma", "Beta", "Sigma");
             questions.Add(questionThree);
-            Question questionFour = new Question(questions.Count, "Ile wynosi masa slonca", "Co najmniej jedno slonce", "Z milion ziem ", "100 ksiezycow", "1000 Jowiszy", "Co najmniej jedno slonce");
-            questions.Add(questionFour);
+            questions.Add(new (questions.Count, "Ile wynosi masa slonca", "Co najmniej jedno slonce", "Z milion ziem ", "100 ksiezycow", "1000 Jowiszy", "Co najmniej jedno slonce"));
         }
         private void NextQuestionM()
         {
