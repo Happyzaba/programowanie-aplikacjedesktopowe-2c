@@ -47,11 +47,13 @@
                                Margin="0,0,10,0"/>
                         <Label Text="{Binding Age}"
                                Margin="0,0,10,0"/>
+                        <Label Text="{Binding Address.City}"
+                               Margin="0,0,10,0"/>
                     </StackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-        <Button Text="Odświerz" Command="{Binding ReadPeopleCommand}"/>
+        <Button Text="Odśwież" Command="{Binding ReadPeopleCommand}"/>
 
         <Label Text="UPDATE"
                FontSize="20"/>
@@ -64,6 +66,11 @@
         <Entry Text="{Binding CurrentSelectionPerson.Age}"/>
         <Button Text="Update"
                 HorizontalOptions="Center"/>
+
+        <Label Text="DELETE"
+               FontSize="20"/>
+        <Button Text="Usuń" 
+                Command="{Binding DeletePersonCommand}"/>
 
 
     </StackLayout>
