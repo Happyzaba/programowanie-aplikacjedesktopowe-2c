@@ -188,7 +188,7 @@ namespace QuizMauiApp
         {
             Question questionOne = new Question(questions.Count, "Kiedy byla bitwa pod Grundwaldem", "pazdziernik 1410", "lipiec 1410", "wrzesien 1410", "listopad 1410", "lipiec 1410");
             questions.Add(questionOne);
-            Question questionTwo = new Question(questions.Count, "Ile wynosi f`(x) od f(x) = 1/5 x^5 + 1/4 x^4 + 2/3 x^3 + 4. Podaj x pochodnej", "0,-2,1", "3,5", "-2,1,3", "-5,-2,0", "0,-2,1");
+            Question questionTwo = new Question(questions.Count, "Ile wynosi 2+2", "2", "3", "-5", "4", "4");
             questions.Add(questionTwo);
             Question questionThree = new Question(questions.Count, "Co to za znak: Σ", "Omega", "Alfa", "Sigma", "Beta", "Sigma");
             questions.Add(questionThree);
