@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using QuizDatabaseClassLibrary;
 
 namespace QuizMauiApp
 {
     internal class ViewModel : BindableObject
     {
+        public QuizDBContext dBContext { get; set; }
         private List<Question> questions = new List<Question>();
         private class Question
         {
@@ -131,7 +133,7 @@ namespace QuizMauiApp
             set { answerFour = questions.Find(q => q.GetId() == questionNumber).GetAnswerFour(); OnPropertyChanged(); }
         }
 
-        private int questionNumber = 0;
+        private int questionNumber = 1;
         public int QuestionNumber
         {
             get { return questionNumber; }
@@ -142,7 +144,7 @@ namespace QuizMauiApp
         public string QuestionText
         {
             get { return questionText; }
-            set { questionText = questions.Find(q => q.GetId() == questionNumber).GetContent(); OnPropertyChanged(); }
+            set { questionText = questions.Find(q => q.GetId() == questionNumber).GetContent(); OnPropertyChanged(); }//pytanie z bazy
         }
 
         private Command reset;
@@ -177,6 +179,7 @@ namespace QuizMauiApp
 
         public ViewModel()
         {
+            dBContext = new QuizDBContext();
             GenerateQuestions();
             UpdateLayout();
             PreviousQuestion = new Command(PreviousQuestionM);
@@ -186,21 +189,26 @@ namespace QuizMauiApp
         }
         private void GenerateQuestions()
         {
-            Question questionOne = new Question(questions.Count, "Kiedy byla bitwa pod Grundwaldem", "pazdziernik 1410", "lipiec 1410", "wrzesien 1410", "listopad 1410", "lipiec 1410");
+           /* Question questionOne = new Question(questions.Count, "Kiedy byla bitwa pod Grundwaldem", "pazdziernik 1410", "lipiec 1410", "wrzesien 1410", "listopad 1410", "lipiec 1410");
             questions.Add(questionOne);
             Question questionTwo = new Question(questions.Count, "Ile wynosi 2+2", "2", "3", "-5", "4", "4");
             questions.Add(questionTwo);
             Question questionThree = new Question(questions.Count, "Co to za znak: Σ", "Omega", "Alfa", "Sigma", "Beta", "Sigma");
             questions.Add(questionThree);
             questions.Add(new (questions.Count, "Ile wynosi masa slonca", "Co najmniej jedno slonce", "Z milion ziem ", "100 ksiezycow", "1000 Jowiszy", "Co najmniej jedno slonce"));
+           */
+
+            questions = dBContext.Answers.Select(a => new Question(
+                a.Id, a.QuestionContent, a.AnswerOne, a.AnswerTwo, a.AnswerThree, a.AnswerFour, a.CorrectAnswer
+            )).ToList();
         }
         private void NextQuestionM()
         {
             LockAnswer();
             QuestionNumber++;
-            if (QuestionNumber >= questions.Count)
+            if (QuestionNumber >= questions.Count+1)
             {
-                QuestionNumber = 0;
+                QuestionNumber = 1;
             }
             UpdateLayout();
             UnCheckAnswer();
@@ -209,7 +217,7 @@ namespace QuizMauiApp
         {
             LockAnswer();
             QuestionNumber--;
-            if (QuestionNumber < 0)
+            if (QuestionNumber < 1)
             {
                 QuestionNumber = questions.Count - 1;
             }
@@ -219,7 +227,7 @@ namespace QuizMauiApp
 
         private void ResetQuiz(object obj)
         {
-            questionNumber = 0;
+            questionNumber = 1;
             foreach (Question question in questions)
             {
                 question.SetAnswerLocked("");
