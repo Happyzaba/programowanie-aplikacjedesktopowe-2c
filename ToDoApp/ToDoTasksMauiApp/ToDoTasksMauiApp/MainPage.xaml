@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ToDoTasksMauiApp.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Label 
+                Text="Nowe Zadanie"/>
+            <HorizontalStackLayout
+                Padding="10,0"
+                Spacing="30">
+                <Entry 
+                    WidthRequest="500"
+                    />
+                <Button
+                    Text="Dodaj"
+                    WidthRequest="250"/>
+            </HorizontalStackLayout>
+            <Label
+                Text="Lista zadań"/>
+            <CollectionView>
+                <!-- 
+                1.nazwa zandania 
+                2. ikona zadania
+                3. przycisk "done" przez ktory bedzie usuwane zadania z listy
+                -->
+            </CollectionView>
+            <Button 
+                Text="usuń"
+                WidthRequest="300"
+                />
+            <Label
+                Text="Usunięte zadania"/>
+            <CollectionView>
+                <!--
+                    1. nazwa usunietego zadania
+                    2. ikona usunietego zadania
+                -->
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
