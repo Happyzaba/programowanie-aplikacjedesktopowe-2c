@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EgzaminMauiApp.MainPage"
+             Title="Wzornik kolorów RGB. Wykonał 00000000000"
+             BackgroundColor="#FFF8DC">
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="40">
+            <BoxView
+            HeightRequest="100"
+                BackgroundColor="White"/>
+            <Label
+                Text="Dobierz kolor suwakami i zapisz przyciskiem"/>
+            <Label
+                Text="R"/>
+            <Slider Value="255"
+                    />
+            <Label
+                 Text="G"/>
+            <Slider Value="255"
+                    />
+            <Label
+                    Text="B"/>
+            <Slider Value="255"/>
+            <Button 
+                Text="Pobierz"
+                BackgroundColor="Peru"
+                TextColor="black"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
