@@ -1,17 +1,45 @@
 ﻿internal class Program
 {
+    static Random random = new Random();
+
     private static void Main(string[] args)
     {
-        Random random = new Random();
+        Console.Write("Ile zestawów wylosować? ");
+        int zestawy = int.Parse(Console.ReadLine());
 
-        Console.WriteLine("Ile wygerenować losowań?");
-        int losowania = int.Parse(Console.ReadLine());
-        Console.WriteLine("Zestawy wylosowanych liczb");
+        int[,] wyniki = new int[zestawy, 6];
+        int[] wystapienia = new int[50];
 
-        for (int i = 1; i <= losowania; i++) {
-            Console.WriteLine("Losowanie: " + i);
-            
+        for (int i = 0; i < zestawy; i++)
+        {
+            HashSet<int> zbior = new HashSet<int>();
+            while (zbior.Count < 6)
+            {
+                int liczba = random.Next(1, 50);
+                zbior.Add(liczba);
+            }
 
+            int j = 0;
+            foreach (int liczba in zbior)
+            {
+                wyniki[i, j++] = liczba;
+                wystapienia[liczba]++;
+            }
+        }
+
+        for (int i = 0; i < zestawy; i++)
+        {
+            Console.Write("Losowanie " + (i + 1) + ": ");
+            for (int j = 0; j < 6; j++)
+                Console.Write(wyniki[i, j] + " ");
+            Console.WriteLine();
+        }
+
+        Console.WriteLine("\nWystąpienia liczb:");
+        for (int i = 1; i <= 49; i++)
+        {
+            if (wystapienia[i] > 0)
+                Console.WriteLine($"Liczba {i}: {wystapienia[i]}");
         }
     }
 }

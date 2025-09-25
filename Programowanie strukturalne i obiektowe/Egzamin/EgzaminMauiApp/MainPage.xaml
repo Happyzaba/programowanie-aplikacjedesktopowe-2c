@@ -3,30 +3,42 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EgzaminMauiApp.MainPage"
              Title="Wzornik kolorów RGB. Wykonał 00000000000"
-             BackgroundColor="#FFF8DC">
-    <ScrollView>
-        <VerticalStackLayout
-            Padding="40">
-            <BoxView
-            HeightRequest="100"
-                BackgroundColor="White"/>
-            <Label
-                Text="Dobierz kolor suwakami i zapisz przyciskiem"/>
-            <Label
-                Text="R"/>
-            <Slider Value="255"
-                    />
-            <Label
-                 Text="G"/>
-            <Slider Value="255"
-                    />
-            <Label
-                    Text="B"/>
-            <Slider Value="255"/>
-            <Button 
-                Text="Pobierz"
-                BackgroundColor="Peru"
-                TextColor="black"/>
-        </VerticalStackLayout>
-    </ScrollView>
+             BackgroundColor="#FFF8DC"
+             xmlns:viewModel="clr-namespace:EgzaminMauiApp">
+    <ContentPage.BindingContext>
+        <viewModel:Viewmodel/>
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout>
+        <BoxView HeightRequest="100" Color="{Binding ColorBox}"/>
+
+        <Label Text="Dobierz kolor suwakami i zapisz przyciskiem:"/>
+
+        <StackLayout Orientation="Horizontal"
+             HorizontalOptions="Center">
+            <Label Text="R" WidthRequest="20"/>
+            <Slider Minimum="0" Maximum="255" WidthRequest="700" Value="{Binding RValue}"/>
+            <Label WidthRequest="40" Text="{Binding RValue}"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal"
+              HorizontalOptions="Center">
+            <Label Text="G" WidthRequest="20"/>
+            <Slider Minimum="0" Maximum="255" WidthRequest="700" Value="{Binding GValue}"/>
+            <Label WidthRequest="40" Text="{Binding GValue}"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal"
+             HorizontalOptions="Center">
+            <Label Text="B" WidthRequest="20"/>
+            <Slider Minimum="0" Maximum="255" WidthRequest="700" Value="{Binding BValue}"/>
+            <Label WidthRequest="40" Text="{Binding BValue}"/>
+        </StackLayout>
+
+        <Button Text="Pobierz" BackgroundColor="#CD853F" WidthRequest="200"/>
+
+        <BoxView  HeightRequest="100" Color="{Binding ColorBox}" WidthRequest="600"/>
+        <Label Text="{Binding TextRGB}"/>
+
+    </VerticalStackLayout>
 </ContentPage>
