@@ -10,7 +10,7 @@
     </ContentPage.BindingContext>
 
     <VerticalStackLayout>
-        <BoxView HeightRequest="100" Color="{Binding ColorBox}"/>
+        <BoxView HeightRequest="100" Color="{Binding ColorBox}" WidthRequest="1000"/>
 
         <Label Text="Dobierz kolor suwakami i zapisz przyciskiem:"/>
 
@@ -20,7 +20,7 @@
             <Slider Minimum="0" Maximum="255" WidthRequest="700" Value="{Binding RValue}"/>
             <Label WidthRequest="40" Text="{Binding RValue}"/>
         </StackLayout>
-
+ 
         <StackLayout Orientation="Horizontal"
               HorizontalOptions="Center">
             <Label Text="G" WidthRequest="20"/>
@@ -35,9 +35,9 @@
             <Label WidthRequest="40" Text="{Binding BValue}"/>
         </StackLayout>
 
-        <Button Text="Pobierz" BackgroundColor="#CD853F" WidthRequest="200"/>
+        <Button Text="Pobierz" BackgroundColor="#CD853F" WidthRequest="200" Command="{Binding GetColorCommand}"/>
 
-        <BoxView  HeightRequest="100" Color="{Binding ColorBox}" WidthRequest="600"/>
+        <BoxView  HeightRequest="100" Color="{Binding BaseColor}" WidthRequest="600"/>
         <Label Text="{Binding TextRGB}"/>
 
     </VerticalStackLayout>
