@@ -10,35 +10,65 @@
     </ContentPage.BindingContext>
 
     <VerticalStackLayout>
-        <BoxView HeightRequest="100" Color="{Binding ColorBox}" WidthRequest="1000"/>
+        <BoxView HeightRequest="100" 
+                 Color="{Binding ColorBox}" 
+                 WidthRequest="1000"/>
 
         <Label Text="Dobierz kolor suwakami i zapisz przyciskiem:"/>
 
         <StackLayout Orientation="Horizontal"
              HorizontalOptions="Center">
-            <Label Text="R" WidthRequest="20"/>
-            <Slider Minimum="0" Maximum="255" WidthRequest="700" Value="{Binding RValue}"/>
-            <Label WidthRequest="40" Text="{Binding RValue}"/>
+            
+            <Label Text="R" 
+                   WidthRequest="20"/>
+            
+            <Slider Minimum="0" 
+                    Maximum="255" 
+                    WidthRequest="700" 
+                    Value="{Binding RValue}"/>
+            <Label WidthRequest="40" 
+                   Text="{Binding RValue}"/>
         </StackLayout>
- 
+
         <StackLayout Orientation="Horizontal"
               HorizontalOptions="Center">
+            
             <Label Text="G" WidthRequest="20"/>
-            <Slider Minimum="0" Maximum="255" WidthRequest="700" Value="{Binding GValue}"/>
-            <Label WidthRequest="40" Text="{Binding GValue}"/>
+            
+            <Slider Minimum="0" 
+                    Maximum="255" 
+                    WidthRequest="700" 
+                    Value="{Binding GValue}"/>
+            <Label WidthRequest="40" 
+                   Text="{Binding GValue}"/>
         </StackLayout>
 
         <StackLayout Orientation="Horizontal"
              HorizontalOptions="Center">
-            <Label Text="B" WidthRequest="20"/>
-            <Slider Minimum="0" Maximum="255" WidthRequest="700" Value="{Binding BValue}"/>
-            <Label WidthRequest="40" Text="{Binding BValue}"/>
+            
+            <Label Text="B"
+                   WidthRequest="20"/>
+            
+            <Slider Minimum="0" 
+                    Maximum="255" 
+                    WidthRequest="700" 
+                    Value="{Binding BValue}"/>
+            
+            <Label WidthRequest="40" 
+                   Text="{Binding BValue}"/>
         </StackLayout>
 
-        <Button Text="Pobierz" BackgroundColor="#CD853F" WidthRequest="200" Command="{Binding GetColorCommand}"/>
+        <Button Text="Pobierz" 
+                BackgroundColor="#CD853F" 
+                WidthRequest="200" 
+                Command="{Binding GetColorCommand}"/>
 
-        <BoxView  HeightRequest="100" Color="{Binding BaseColor}" WidthRequest="600"/>
-        <Label Text="{Binding TextRGB}"/>
+        <Label  HeightRequest="100" 
+                BackgroundColor="{Binding BaseColor}" 
+                Text="{Binding TextRGB}" 
+                WidthRequest="600" 
+                HorizontalTextAlignment="Center" 
+                VerticalTextAlignment="Center"/>
 
     </VerticalStackLayout>
 </ContentPage>
